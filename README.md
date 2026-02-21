@@ -7,19 +7,20 @@ A practical implementation of asynchronous microservices communication using Spr
 RabbitMQ requires Erlang to be installed first.
 
 ### 1️⃣ Install Erlang
-1. Go to the official Erlang website: https://www.erlang.org/downloads
-2. Download the latest Windows installer.
-3. Install it normally.
-4. Set environment variable:
+   1. Go to the official Erlang website: https://www.erlang.org/downloads
+   2. Download the latest Windows installer.
+   3. Install it normally.
+   4. Set environment variable:
    - Variable Name: ERLANG_HOME
    - Value:
-        ```bash
-        C:\Program Files\Erlang OTP\erl-XX.X
-        ```
-5. Open CMD and verify: ```bash
-              erl
-            ```
-   If Erlang shell opens successfully → Installation is correct.
+     ```bash
+     C:\Program Files\Erlang OTP\erl-XX.X
+     ```
+   5. Open CMD and verify:
+      ```bash
+      erl
+      ```
+      If Erlang shell opens successfully → Installation is correct.
 
 ### 2️⃣ Install RabbitMQ
 1. Go to official RabbitMQ website: https://www.rabbitmq.com/docs/download
