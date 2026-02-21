@@ -46,7 +46,7 @@ RabbitMQ requires Erlang to be installed first.
 ### 4️⃣ Access RabbitMQ Dashboard
    1. Open your browser:
          ```bash
-         [rabbitmq-plugins enable rabbitmq_management](http://localhost:15672)
+         http://localhost:15672
          ```
    2. Default credentials:
          ```bash
