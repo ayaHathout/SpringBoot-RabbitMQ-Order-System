@@ -12,9 +12,10 @@ RabbitMQ requires Erlang to be installed first.
 3. Install it normally.
 4. Set environment variable:
    - Variable Name: ERLANG_HOME
-   - Value: ```bash
-              C:\Program Files\Erlang OTP\erl-XX.X
-            ```
+   - Value:
+        ```bash
+        C:\Program Files\Erlang OTP\erl-XX.X
+        ```
 5. Open CMD and verify: ```bash
               erl
             ```
