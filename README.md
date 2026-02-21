@@ -97,26 +97,26 @@ RabbitMQ requires Erlang to be installed first.
 2. Run your Spring Boot application
 3. Test endpoint:
     ```bash
-         POST /orders
-         Content-Type: application/json
-         
-         {
-           "productName": "Book",
-           "productPrice": "20",
-           "productQuantity": "2"
-         }
+    POST /orders
+    Content-Type: application/json
+     
+    {
+       "productName": "Book",
+       "productPrice": "20",
+       "productQuantity": "2"
+    }
     ```
     - Response:
         ```bash
-            {
-              "order": {
-                "productName": "Book",
-                "productPrice": "20",
-                "productQuantity": "2"
-              },
-              "orderStatus": "Placed",
-              "message": "Your order has been placed successfully"
-            }
+        {
+           "order": {
+           "productName": "Book",
+           "productPrice": "20",
+           "productQuantity": "2"
+           },
+           "orderStatus": "Placed",
+           "message": "Your order has been placed successfully"
+        }
       ```
    - Consumer prints the message asynchronously:
        ```bash
