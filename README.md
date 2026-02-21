@@ -3,7 +3,7 @@ A practical implementation of asynchronous microservices communication using Spr
 
 ---
 
-## 🐰 Installing RabbitMQ (Step-by-Step Guide)
+## 🐰 Installing RabbitMQ For Windows (Step-by-Step Guide)
 RabbitMQ requires Erlang to be installed first.
 
 ### 1️⃣ Install Erlang
