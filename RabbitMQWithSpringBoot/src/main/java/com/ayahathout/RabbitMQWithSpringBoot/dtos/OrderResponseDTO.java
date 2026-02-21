@@ -13,7 +13,7 @@ import java.io.Serializable;
 @NoArgsConstructor
 @Builder
 public class OrderResponseDTO implements Serializable {
-    private Order order;
+    private OrderRequestDTO order;
     private String orderStatus = "Placed";
     private String message = "Your order has been placed successfully";
 }
