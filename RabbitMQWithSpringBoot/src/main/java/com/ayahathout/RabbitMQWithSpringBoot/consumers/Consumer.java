@@ -11,6 +11,9 @@ public class Consumer {
     @Autowired
     private RabbitTemplate rabbitTemplate;
 
+    // Consume any message exists in the RabbitMQ named "${queue.name}"
+    // These consumers are supposed to be Payment service & Notification service
+    // The consumer just takes the message which includes all the information it'll need and does its business logic
     @RabbitListener(queues = {"${queue.name}"})
     public void consume(OrderResponseDTO orderResponseDTO) {
         System.out.println("Consumer received " + orderResponseDTO);

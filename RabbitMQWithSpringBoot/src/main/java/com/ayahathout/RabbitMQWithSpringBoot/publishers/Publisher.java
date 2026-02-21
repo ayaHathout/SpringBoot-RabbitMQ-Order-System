@@ -27,8 +27,11 @@ public class Publisher {
         OrderResponseDTO orderResponseDTO = new OrderResponseDTO();
         orderResponseDTO.setOrder(orderRequestDTO);
 
+        // Publish the message to the RabbitMQ ==> This message should contain all the information the consumers (here: Payment service & Notification service) will need to do their business logic
+        // Payment service & Notification service take a lot of time to do their work ==> So I immediately send orderResponseDTO to user and the consumers do their work in the background
         rabbitTemplate.convertAndSend(exchangeName, routingKeyName, orderResponseDTO);
 
+        // This will return to user immediately ==> User does not blocked
         return orderResponseDTO;
     }
 }
