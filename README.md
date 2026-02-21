@@ -120,7 +120,7 @@ RabbitMQ requires Erlang to be installed first.
       ```
    - Consumer prints the message asynchronously:
        ```bash
-               Consumer received OrderResponseDTO{...}
+       Consumer received OrderResponseDTO{...}
         ```
      
 ---
