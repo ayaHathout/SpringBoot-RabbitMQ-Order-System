@@ -27,7 +27,8 @@ RabbitMQ requires Erlang to be installed first.
    2. Download the Windows installer.
    3. Install normally.
    4. Add RabbitMQ sbin folder to PATH:
-     Example:
+
+      Example:
          ```bash
          C:\Program Files\RabbitMQ Server\rabbitmq_server-3.xx.x\sbin
          ```
