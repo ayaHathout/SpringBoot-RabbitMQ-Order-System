@@ -110,9 +110,9 @@ RabbitMQ requires Erlang to be installed first.
         ```bash
         {
            "order": {
-           "productName": "Book",
-           "productPrice": "20",
-           "productQuantity": "2"
+              "productName": "Book",
+              "productPrice": "20",
+              "productQuantity": "2"
            },
            "orderStatus": "Placed",
            "message": "Your order has been placed successfully"
