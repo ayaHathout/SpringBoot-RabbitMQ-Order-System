@@ -1,4 +1,4 @@
-package com.ayahathout.RabbitMQWithSpringBoot.models;
+package com.ayahathout.RabbitMQWithSpringBoot.dtos;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -6,14 +6,12 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
-import java.util.UUID;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class Order implements Serializable {
-    private String orderId = UUID.randomUUID().toString();
+public class OrderRequestDTO implements Serializable {
     private String productName;
     private String productPrice;
     private String productQuantity;
