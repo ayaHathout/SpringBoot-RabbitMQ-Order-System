@@ -3,6 +3,40 @@ A practical implementation of asynchronous communication using Spring Boot and R
 
 ---
 
+## 📌 Overview
+
+This project demonstrates a **basic event-driven flow** using **Spring Boot** and **RabbitMQ**.
+
+- Customers can create orders using a REST API.
+- Orders are immediately sent to RabbitMQ as messages (events).
+- A consumer reads the messages asynchronously and processes them.
+- Client receives an immediate response without waiting for processing.
+
+This demo shows the **core idea of asynchronous communication and event-driven architecture** before scaling to multiple microservices like Payment or Notification services.
+
+---
+
+## 🏗 Flow
+
+Client ---> Order Service ---> returns "Order Received" immediately
+|
+| publishes OrderPlaced event
+v
+Consumer (simulating Payment & Notification)
+processes order asynchronously
+
+---
+
+## 🛠 Tech Stack
+
+- Java 21
+- Spring Boot
+- RabbitMQ
+- Maven
+- REST API
+
+---
+
 ## 🐰 Installing RabbitMQ For Windows (Step-by-Step Guide)
 RabbitMQ requires Erlang to be installed first.
 
@@ -56,3 +90,44 @@ RabbitMQ requires Erlang to be installed first.
        If the dashboard appears successfully → RabbitMQ is ready 🎉
 
 ---
+
+## 🚀 Running the Demo
+
+1. Start RabbitMQ
+2. Run your Spring Boot application
+3. Test endpoint:
+    ```bash
+         POST /orders
+         Content-Type: application/json
+         
+         {
+           "productName": "Book",
+           "productPrice": "20",
+           "productQuantity": "2"
+         }
+    ```
+    - Response:
+        ```bash
+            {
+              "order": {
+                "productName": "Book",
+                "productPrice": "20",
+                "productQuantity": "2"
+              },
+              "orderStatus": "Placed",
+              "message": "Your order has been placed successfully"
+            }
+      ```
+   - Consumer prints the message asynchronously:
+       ```bash
+               Consumer received OrderResponseDTO{...}
+        ```
+     
+---
+
+## 🔥 What This Demo Shows
+
+- Asynchronous message publishing using RabbitMQ
+- Event-driven concept
+- Immediate response to client
+- How consumers process messages independently
