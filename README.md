@@ -5,7 +5,7 @@ A practical implementation of asynchronous communication using Spring Boot and R
 
 ## 📌 Overview
 
-This project demonstrates a **basic event-driven flow** using **Spring Boot** and **RabbitMQ**.
+This project demonstrates a basic **event-driven flow** using **Spring Boot** and **RabbitMQ**.
 
 - Customers can create orders using a REST API.
 - Orders are immediately sent to RabbitMQ as messages (events).
