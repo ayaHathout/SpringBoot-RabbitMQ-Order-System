@@ -23,7 +23,7 @@ public class Publisher {
     private String routingKeyName;
 
     @PostMapping
-    public OrderResponseDTO createOrder(@RequestBody OrderRequestDTO orderRequestDTO) {
+    public String createOrder(@RequestBody OrderRequestDTO orderRequestDTO) {
         OrderResponseDTO orderResponseDTO = new OrderResponseDTO();
         orderResponseDTO.setOrder(orderRequestDTO);
 
@@ -32,6 +32,6 @@ public class Publisher {
         rabbitTemplate.convertAndSend(exchangeName, routingKeyName, orderResponseDTO);
 
         // This will return to user immediately ==> User does not blocked
-        return orderResponseDTO;
+        return "Your order has been received successfully!";
     }
 }
